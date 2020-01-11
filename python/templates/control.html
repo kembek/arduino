@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Control</title>
+    <style>
+      .main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .light-controls {
+        display: flex;
+        flex-direction: row;
+        height: 20%;
+      }
+
+      .robot-controls {
+        height: 40%;
+      }
+
+      .light-control__item {
+        border: 1px solid black;
+        color: white;
+        padding: 10px;
+        width: 60px;
+        text-align: center;
+        margin: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .5s linear;
+      }
+
+      .light-control__item:hover {
+        opacity: .7;
+        font-size: 18px;
+      }
+
+      .red {
+        background: tomato;
+      }
+
+      .blue {
+        background: darkblue;
+      }
+
+      .white {
+        color: black;
+        background: white;
+      }
+
+      .green {
+        background:green;
+      }
+
+      .robot-controls {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+      }
+
+      .robot-control__item { 
+        border: 1px solid;
+        flex: 1;
+        height: 50px;
+      }
+      
+      .speed-controls {
+		  border: 1px solid red;
+	  }
+	  
+	  .speed-control__item {
+		  border: 1px solid;
+		  padding: 5px;
+		  
+	  }
+	  
+	  .plus {
+		  background: red;
+	   }
+		  
+	  .minus {
+		  background: blue;
+	   }
+
+    </style>
+  </head>
+  <body>
+    <main class="main">
+		<div class="bluetooth-control">
+			<a href="O">Bluetoth on</a>
+			<a href="C">Bluetoth off</a>
+			<p>Bluetooth state: {{ BT_STATE }}</p>
+		</div>
+		
+		<div class="speed-controls">
+			<div class="speed-control__item plus"><a href="+">Speed Up +</a></div>
+			<div class="speed-control__item minus"><a href="-">Speed Low -</a></a></div>
+		</div>
+      <div class="light-controls">
+        <div class="light-control__item red">Red</div>
+        <div class="light-control__item blue">Blue</div>
+        <div class="light-control__item white">White</div>
+        <div class="light-control__item green">Green</div>
+      </div>
+      <div class="robot-controls">
+        <div class="robot-control__item left"><a href="L">LEFT</a></div>
+        <div class="robot-control__item right"><a href="R">Right</a></div>
+        <div class="robot-control__item forward"><a href="G">GO</a></div>
+        <div class="robot-control__item back"><a href="B">Back</a></div>
+        <div class="robot-control__item stop"><a href="S">Stop</a></div>
+      </div>
+    </main>
+  </body>
+</html>
